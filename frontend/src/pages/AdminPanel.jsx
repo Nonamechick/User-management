@@ -14,7 +14,7 @@ export default function AdminPanel() {
 
   useEffect(() => {
     setIsLoading(true);
-    axios.get(`${API}/api/users`, {
+    axios.get(`${API}/users`, {
       headers: { Authorization: `Bearer ${token}` }
     }).then(res => {
       setUsers(res.data);
