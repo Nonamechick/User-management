@@ -10,9 +10,11 @@ export default function AdminPanel() {
   const [error, setError] = useState('');
   const [isLoading, setIsLoading] = useState(true);
 
+  const API = import.meta.env.VITE_API_URL || '';
+
   useEffect(() => {
     setIsLoading(true);
-    axios.get('/api/users', {
+    axios.get(`${API}/api/users`, {
       headers: { Authorization: `Bearer ${token}` }
     }).then(res => {
       setUsers(res.data);
