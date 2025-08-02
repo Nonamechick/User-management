@@ -10,7 +10,7 @@ export default function AdminPanel() {
   const [error, setError] = useState('');
   const [isLoading, setIsLoading] = useState(true);
 
-  const API = import.meta.env.VITE_API_URL || '';
+  const API = import.meta.env.VITE_API_BASE_URL || '';
 
   useEffect(() => {
     setIsLoading(true);
