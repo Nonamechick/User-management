@@ -28,7 +28,7 @@ A full-stack web application for user management with authentication, featuring 
 
 Check out the live demo: [Demo Website](https://user-management-six-orcin.vercel.app)
 
-Watch the video walkthrough: [YouTube Demo]([https://youtube.com/your-demo-link](https://youtu.be/-UM2uPr_EUw))
+Watch the video walkthrough: [YouTube Demo](https://youtu.be/-UM2uPr_EUw)
 
 ## Installation
 
