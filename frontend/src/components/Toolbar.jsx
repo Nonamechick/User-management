@@ -1,18 +1,18 @@
-import axios from 'axios';
+import axios from '../api/axios'; 
 import { useAuth } from '../context/AuthContext';
 
 export default function Toolbar({ selectedIds, refresh }) {
   const { token } = useAuth();
 
   const updateStatus = async (status) => {
-    await axios.post('/api/users/status', { ids: selectedIds, status }, {
+    await axios.post('/users/status', { ids: selectedIds, status }, {
       headers: { Authorization: `Bearer ${token}` }
     });
     refresh();
   };
 
   const deleteUsers = async () => {
-    await axios.post('/api/users/delete', { ids: selectedIds }, {
+    await axios.post('/users/delete', { ids: selectedIds }, {
       headers: { Authorization: `Bearer ${token}` }
     });
     refresh();

@@ -43,3 +43,17 @@ exports.login = async (req, res) => {
   });
   res.json({ token });
 };
+
+
+exports.blockUser = async (req, res) => {
+  const { id } = req.params;
+  try {
+    await prisma.user.update({
+      where: { id: Number(id) },
+      data: { status: "blocked" },
+    });
+    res.json({ message: "User blocked successfully" });
+  } catch (err) {
+    res.status(500).json({ message: "Error blocking user" });
+  }
+};
