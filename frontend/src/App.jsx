@@ -6,6 +6,8 @@ import { AuthProvider } from './context/AuthContext';
 import ProtectedRoute from './components/ProtectedRoute';
 
 function App() {
+
+  console.log("ENV BASE:", import.meta.env.VITE_API_BASE_URL);
   return (
     <Router>
       <AuthProvider>
