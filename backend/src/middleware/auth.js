@@ -1,7 +1,8 @@
 // middleware/auth.js
 const jwt = require("jsonwebtoken");
-const { PrismaClient } = require("../generated/prisma");
+const { PrismaClient } = require('@prisma/client');
 const prisma = new PrismaClient();
+
 
 module.exports = async function (req, res, next) {
   const token = req.headers.authorization?.split(" ")[1];
