@@ -7,7 +7,7 @@ export default defineConfig({
   server: {
     proxy: {
       '/api': {
-        target: 'http://localhost:5000',
+        target: 'https://user-management-1-ystr.onrender.com',
         changeOrigin: true,
         secure: false,
       },

@@ -6,7 +6,8 @@
   "scripts": {
     "test": "jest",
     "dev": "nodemon src/index.js",
-    "start": "node src/index.js"
+    "start": "node src/index.js",
+    "prisma:generate": "npx prisma generate --schema=backend/prisma/schema.prisma"
   },
   "keywords": [],
   "author": "",
